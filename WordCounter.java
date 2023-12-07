@@ -4,16 +4,13 @@
 
 public class WordCounter {
 
-    //DECLARE CLASS VARIABLES HERE
-    // LPHash lph = new LPHash(4);
-
     public static void countWords(String [] words) {
-    LPHash lph = new LPHash();
+        LPHash lph = new LPHash(words.length);
 
-        //Impelement your solution here
-       
+        lph.createLPH(words);
+        lph.printHashTable();
+
     }
-
 
     public static void main(String [] args) {
         String input = "input.txt";
